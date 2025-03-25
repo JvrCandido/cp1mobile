@@ -4,7 +4,7 @@ import InputField from './src/componets/InputField';
 import Logo from './src/componets/Logo';
 
 const App = () => {
-  // Variáveis de estado
+
   const [jttNota1, setJttNota1] = useState('0');
   const [jttNota2, setJttNota2] = useState('0');
   const [jttNota3, setJttNota3] = useState('0');
