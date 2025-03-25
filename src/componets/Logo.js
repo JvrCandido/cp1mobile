@@ -1,12 +1,12 @@
 import React from 'react';
-import { TouchableOpacity, Image } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
 
 const Logo = ({ onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <Image
-        source={require('../../assets/logo_fiap.png')} // Corrigido o caminho
-        style={{ width: 100, height: 100, alignSelf: 'center' }}
+        source={require('../../assets/logo_fiap.png')}
+        style={{ width: 500, height: 200, alignSelf: 'center' }}
       />
     </TouchableOpacity>
   );

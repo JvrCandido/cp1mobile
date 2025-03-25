@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet, ScrollView } from 'react-native';
+import { Button, ScrollView, StyleSheet, Text } from 'react-native';
 import InputField from './src/componets/InputField';
 import Logo from './src/componets/Logo';
 
 const App = () => {
   // Variáveis de estado
-  const [pmNota1, setPmNota1] = useState('0');
-  const [pmNota2, setPmNota2] = useState('0');
-  const [pmNota3, setPmNota3] = useState('0');
-  const [pmFaltas, setPmFaltas] = useState('0');
+  const [jttNota1, setJttNota1] = useState('0');
+  const [jttNota2, setJttNota2] = useState('0');
+  const [jttNota3, setJttNota3] = useState('0');
+  const [jttFaltas, setJttFaltas] = useState('0');
   const [message, setMessage] = useState('');
 
   const resetFields = () => {
-    setPmNota1('0');
-    setPmNota2('0');
-    setPmNota3('0');
-    setPmFaltas('0');
+    setJttNota1('0');
+    setJttNota2('0');
+    setJttNota3('0');
+    setJttFaltas('0');
     setMessage('');
   };
 
   const handleValidation = () => {
-    const nota1 = parseFloat(pmNota1) || 0;
-    const nota2 = parseFloat(pmNota2) || 0;
-    const nota3 = parseFloat(pmNota3) || 0;
-    const faltas = parseInt(pmFaltas) || 0;
+    const nota1 = parseFloat(jttNota1) || 0;
+    const nota2 = parseFloat(jttNota2) || 0;
+    const nota3 = parseFloat(jttNota3) || 0;
+    const faltas = parseInt(jttFaltas) || 0;
 
     const media = (nota1 + nota2 + nota3 - Math.min(nota1, Math.min(nota2, nota3))) / 2;
 
-    // Regras de aprovação
+
     if (faltas > 20) {
       setMessage('Reprovado por falta');
     } else if (media < 6) {
@@ -42,23 +42,23 @@ const App = () => {
       <Logo onPress={resetFields} />
       <InputField
         label="Nota 1"
-        value={pmNota1}
-        onChange={setPmNota1}
+        value={jttNota1}
+        onChange={setJttNota1}
       />
       <InputField
         label="Nota 2"
-        value={pmNota2}
-        onChange={setPmNota2}
+        value={jttNota2}
+        onChange={setJttNota2}
       />
       <InputField
         label="Nota 3"
-        value={pmNota3}
-        onChange={setPmNota3}
+        value={jttNota3}
+        onChange={setJttNota3}
       />
       <InputField
         label="Faltas"
-        value={pmFaltas}
-        onChange={setPmFaltas}
+        value={jttFaltas}
+        onChange={setJttFaltas}
         keyboardType="numeric"
       />
       <Button title="Validar" onPress={handleValidation} />
