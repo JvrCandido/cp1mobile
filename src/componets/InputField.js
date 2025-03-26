@@ -8,7 +8,7 @@ const InputField = ({ label, value, onChange, keyboardType = 'numeric' }) => {
       <TextInput
         style={{
           borderWidth: 1,
-          borderColor: '#ccc',
+          borderColor: '#000000FF',
           padding: 10,
           borderRadius: 5,
         }}
@@ -16,6 +16,7 @@ const InputField = ({ label, value, onChange, keyboardType = 'numeric' }) => {
         onChangeText={onChange}
         keyboardType={keyboardType}
         placeholder="Digite o valor"
+        borderColor ="#000000FF"
       />
     </View>
   );

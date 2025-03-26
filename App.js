@@ -75,7 +75,7 @@ const App = () => {
       <InputField label="Nota 2" value={jttNota2} onChange={setJttNota2} />
       <InputField label="Nota 3" value={jttNota3} onChange={setJttNota3} />
       <InputField label="Faltas" value={jttFaltas} onChange={setJttFaltas} keyboardType="numeric" />
-      <Button title="Validar" onPress={handleValidation} />
+      <Button title="Validar" color={'#0D0D0DFF'} onPress={handleValidation} />
 
       {message ? <Text style={styles.message}>{message}</Text> : null}
     </ScrollView>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 
     padding: 20,
 
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#E53782FF',
 
   },
 
