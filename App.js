@@ -46,7 +46,7 @@ const App = () => {
 
     const faltas = parseInt(jttFaltas) || 0;
 
-    // Ordenar notas e remover a menor
+
 
     notas.sort((a, b) => b - a);
 
